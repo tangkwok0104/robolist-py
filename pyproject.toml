@@ -1,0 +1,55 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "robolist-client"
+version = "0.1.0"
+description = "Python client for Robolist.ai — the independent robotics industry directory and leaderboard"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Robolist.ai", email = "hello@robolist.ai" }]
+keywords = [
+  "robotics",
+  "robot",
+  "cobot",
+  "humanoid",
+  "automation",
+  "industrial",
+  "AMR",
+  "AGV",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+dependencies = ["httpx>=0.24.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "pytest-httpx>=0.22", "mypy>=1.0", "ruff>=0.4"]
+
+[project.urls]
+Homepage = "https://www.robolist.ai"
+Documentation = "https://www.robolist.ai/faq"
+Repository = "https://github.com/tangkwok0104/robolist-py"
+"Issue Tracker" = "https://github.com/tangkwok0104/robolist-py/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["robolist_client"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.mypy]
+strict = true
