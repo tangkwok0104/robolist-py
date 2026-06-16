@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "robolist-client"
-version = "0.1.0"
+version = "0.2.0"
 description = "Python client for Robolist.ai — the independent robotics industry directory and leaderboard"
 readme = "README.md"
 requires-python = ">=3.9"
